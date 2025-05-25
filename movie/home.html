@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOVIE RECOMMENDATIONS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            animation: backgroundSlide 30s infinite linear;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        @keyframes backgroundSlide {
+            0% {
+                background-image: url('https://static1.srcdn.com/wordpress/wp-content/uploads/2020/05/Promo-Featured-Image-Movie-Poster-Trends.jpg');
+            }
+            33% {
+                background-image: url('https://staticc.sportskeeda.com/editor/2023/02/c099d-16769375471111-1920.jpg');
+            }
+            66% {
+                background-image: url('http://images5.fanpop.com/image/photos/31900000/Avengers-fandoms-31975314-1920-1280.jpg');
+            }
+            100% {
+                background-image: url('https://static1.srcdn.com/wordpress/wp-content/uploads/2020/05/Promo-Featured-Image-Movie-Poster-Trends.jpg');
+            }
+        }
+
+        .header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+            animation: slideUp 1.5s ease-out;
+            box-shadow: 0 0 40px 10px white;
+        }
+
+        .container h1 {
+            font-size: 36px;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px black;
+        }
+
+        .container p {
+            font-size: 18px;
+            color: #eee;
+            margin-bottom: 30px;
+        }
+
+        .email-form {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .email-form input[type="email"] {
+            padding: 12px 15px;
+            width: 60%;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .email-form button {
+            padding: 12px 20px;
+            background-color: #e50914;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .email-form button:hover {
+            background-color: #b20710;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container h1 {
+                font-size: 28px;
+            }
+
+            .email-form input[type="email"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">MOVIE RECOMMENDATIONS</div>
+    <div class="container">
+        <h1>Unlimited movies, Watch anywhere, Cancel anytime</h1>
+        <p>Ready to watch? Enter your email to get started.</p>
+        <form class="email-form" action="login.html" method="GET">
+            <input type="email" placeholder="Enter your email" name="email" required>
+            <button type="submit">Get Started</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://wallpapers.com/images/hd/movie-pictures-6wyzge6gh220u6ai.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .navbar {
+      background-color: rgba(255, 0, 0, 0.85);
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-size: 16px;
+      flex-wrap: wrap;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 5px 10px;
+      color: white;
+    }
+
+    .nav-item:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+    }
+
+    .nav-item i {
+      margin-right: 6px;
+    }
+
+    .navbar input {
+      padding: 6px;
+      border-radius: 5px;
+      border: none;
+      width: 160px;
+    }
+
+    #searchResults {
+      position: absolute;
+      top: 65px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      box-shadow: 0 0 10px white;
+      padding: 10px;
+      display: none;
+      z-index: 999;
+    }
+
+    #searchResults div {
+      padding: 6px;
+      cursor: pointer;
+      color: yellow;
+    }
+
+    #searchResults div:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .glass-section {
+      margin: 20px 30px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      box-shadow: 0 0 15px white;
+      color: white;
+    }
+
+    .glass-section h3 {
+      color: #ffeb3b;
+    }
+
+    .glass-section ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .glass-section li {
+      line-height: 1.6;
+    }
+
+    #welcome {
+      margin: 20px 30px;
+      font-size: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      border-radius: 8px;
+      padding: 10px;
+      display: inline-block;
+      box-shadow: 0 0 10px white;
+    }
+  </style>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="nav-item" onclick="goTo('home.html')">
+      <i class="fas fa-home"></i> Home
+    </div>
+    <div class="nav-item" onclick="showUser()">
+      <i class="fas fa-user"></i> User
+    </div>
+    <div class="nav-item" onclick="showGenres()">
+      <i class="fas fa-film"></i> Genre
+    </div>
+    <div class="nav-item" onclick="showActors()">
+      <i class="fas fa-theater-masks"></i> Actors
+    </div>
+    <input type="text" id="searchInput" placeholder="Search genre..." onkeyup="searchGenre()">
+    <div class="nav-item" onclick="goTo('sub.html')">
+      <i class="fas fa-credit-card"></i> Subscription
+    </div>
+    <div class="nav-item" onclick="goTo('login.html')">
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </div>
+  </div>
+
+  <div id="searchResults"></div>
+  <div id="welcome">Welcome, <span id="username">User</span> 🎬</div>
+  <div id="userSection" class="glass-section" style="display:none;"></div>
+  <div id="genreSection" class="glass-section" style="display:none;"></div>
+  <div id="actorSection" class="glass-section" style="display:none;"></div>
+
+  <script>
+    // Simulated dataset
+    const dataset = {
+      genres: [
+        "Action", "Comedy", "Drama", "Horror", "Romance", "Sci-Fi", 
+        ,"Animation", "Mystery"
+      ],
+      actors: [
+        "Tom Hanks", "Scarlett Johansson", "Leonardo DiCaprio", "Natalie Portman",
+        "Brad Pitt", "Emma Stone", "Robert Downey Jr.", "Jennifer Lawrence",
+        "Morgan Freeman", "Angelina Jolie", "Chris Evans", "Gal Gadot"
+      ]
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const user = urlParams.get('user');
+    if (user) document.getElementById('username').textContent = user;
+
+    function goTo(page) {
+      window.location.href = page;
+    }
+
+    function showUser() {
+      document.getElementById("userSection").style.display = "block";
+      document.getElementById("userSection").innerHTML = `<h3>User Info</h3><p>Logged in as: <strong>${user || "Guest"}</strong></p>`;
+    }
+
+    function showGenres() {
+      const html = "<h3>Popular Genres</h3><ul>" + dataset.genres.map(g => `<li>${g}</li>`).join('') + "</ul>";
+      document.getElementById("genreSection").style.display = "block";
+      document.getElementById("genreSection").innerHTML = html;
+    }
+
+    function showActors() {
+      const html = "<h3>Famous Actors</h3><ul>" + dataset.actors.map(a => `<li>${a}</li>`).join('') + "</ul>";
+      document.getElementById("actorSection").style.display = "block";
+      document.getElementById("actorSection").innerHTML = html;
+    }
+
+    function searchGenre() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const results = dataset.genres.filter(g => g.toLowerCase().includes(input));
+      const resultDiv = document.getElementById("searchResults");
+
+      if (input && results.length > 0) {
+        resultDiv.innerHTML = results.map(g => `<div onclick="redirectToGenre('${g}')">${g}</div>`).join('');
+        resultDiv.style.display = "block";
+      } else {
+        resultDiv.style.display = "none";
+      }
+    }
+
+    function redirectToGenre(genre) {
+      const page = `genre_${genre.toLowerCase().replace(/\s+/g, '')}.html`;
+      window.location.href = page;
+    }
+  </script>
+</body>
+</html>

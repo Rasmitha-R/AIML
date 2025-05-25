@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Movie Recommendations</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://www.scrolldroll.com/wp-content/uploads/2022/10/Best-English-action-Movies-Of-2022-featured.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        .overlay {
+            background-color: rgba(26, 25, 25, 0.546);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color:  rgba(247, 105, 105, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            height: 400px; /* Reduced height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 10px hsla(0, 3%, 88%, 0.102);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .title {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .genre, .rating, .subscription {
+            font-size: 1em;
+            margin-top: 5px;
+        }
+
+        .subscription {
+            color: #00ffcc;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #00ffcc;
+            color: black;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #00ccaa;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <h1>Top Action Movie Recommendations</h1>
+            <div class="movie-grid">
+                <div class="card">
+                    <div class="title">Toy Story</div>
+                    <img src="https://www.nme.com/wp-content/uploads/2019/03/toystory4.jpg" width=258 height=210 alt="Toy Story">
+                    <div class="genre">Genre: Animation</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update:11 January 2020</div>
+                    <div class="rating">Rating: 8.8/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+            
+                </div>
+                <div class="card">
+                    <div class="title">Frozen</div>
+                    <img src="http://worldtraveledfamily.com/wp-content/uploads/2014/06/Disney-Hollywood-Studios-Frozen-Summer-Fun-Live.jpg" width=258 height=210 alt="Frozen">
+                    <div class="genre">Genre: Animation</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update: 15 octomber 2022</div>
+                    <div class="rating">Rating: 8.1/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                   
+                </div>
+                <div class="card">
+                    <div class="title">Finding Nemo</div>
+                    <img src="https://i.pinimg.com/originals/ec/04/06/ec040600f6f42d4e4707e453f5799ddf.webp" width=258 height=210 alt="Finding Nemo">
+                    <div class="genre">Genre: Animation</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: Hindi</div>
+                    <div class="Latest Update">Latest Update:27 may 2023</div>
+                    <div class="rating">Rating: 9.0/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                   
+                </div>
+                <div class="card">
+                    <div class="title">Zootopia</div>
+                    <img src="http://img.lum.dolimg.com/v1/images/rich_zootopia_header_aa1d6dc0.jpeg?region=0,0,2048,1200" width=258 height=210 alt="Zootopia">
+                    <div class="genre">Genre: Animation</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: Spanish</div>
+                    <div class="Latest Update">Latest Update:23 April 2024</div>
+                    <div class="rating">Rating: 7.4/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                    
+                </div>
+                <div class="card">
+                    <div class="title">Coco</div>
+                    <img src="https://i.ytimg.com/vi/noF8KicPDjE/maxresdefault.jpg" width=258 height=210 alt="Coco">
+                    <div class="genre">Genre: Animation</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update :08 march 2025</div>
+                    <div class="rating">Rating: 8.5/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                    
+                </div>
+                <div class="card">
+                    <div class="title">Zombieland</div>
+                    <div class="title">Inside Out</div>
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTY1NTAwMjEwOV5BMl5BanBnXkFtZTcwNDIwODM4Mg@@._V1_.jpg" width=258 height=210 alt="Inside Out">
+                    <div class="genre">Genre: Animation</div>
+                    <div class="Latest Update">Latest Update:01 January 2023</div>
+                    <div class="rating">Rating: 8.6/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                    
+                </div>
+            </div>
+
+            <div class="download-section">
+                <button class="btn" onclick="downloadList()">Download List</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadList() {
+            const recommendations = `
+Top Animation Movie Recommendations:
+
+1. Toy Story - Genre: Animation - Rating: 8.3/10
+2. Frozen - Genre: Animation - Rating: 7.4/10
+3. Finding Nemo - Genre: Animation - Rating: 8.1/10
+4. Zootopia - Genre: Animation - Rating: 8.0/10
+5. Coco - Genre: Animation - Rating: 8.4/10
+6. Inside Out - Genre: Animation - Rating: 8.2/10
+            `;
+            const blob = new Blob([recommendations], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'movie_recommendations.txt';
+            link.click();
+        }
+    </script>
+</body>
+</html>

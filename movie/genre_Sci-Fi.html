@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Movie Recommendations</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://www.scrolldroll.com/wp-content/uploads/2022/10/Best-English-action-Movies-Of-2022-featured.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        .overlay {
+            background-color: rgba(26, 25, 25, 0.546);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color:  rgba(247, 105, 105, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            height: 400px; /* Reduced height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 10px hsla(0, 3%, 88%, 0.102);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .title {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .genre, .rating, .subscription {
+            font-size: 1em;
+            margin-top: 5px;
+        }
+
+        .subscription {
+            color: #00ffcc;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #00ffcc;
+            color: black;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #00ccaa;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <h1>Top Sci-fiction Movie Recommendations</h1>
+            <div class="movie-grid">
+                <div class="card">
+                    <div class="title">Interstellar</div>
+                    <img src="https://sm.mashable.com/t/mashable_in/photo/default/interstellar_ty84.2496.jpg" width=258 height=210 alt="Interstellar">
+                    <div class="genre">Genre: Science Fiction</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update: 01 March 2025</div>
+                    <div class="rating">Rating: 7.5/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+            
+                </div>
+                <div class="card">
+                    <div class="title">Inception</div>
+                    <img src="https://facts.net/wp-content/uploads/2023/06/46-facts-about-the-movie-inception-1687262452.jpg" width=258 height=210 alt="Inception">
+                    <div class="genre">Genre: Science Fiction</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update: 25 Dec 2024</div>
+                    <div class="rating">Rating: 7.3/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                </div>
+                <div class="card">
+                    <div class="title">The Matrix</div>
+                    <img src="https://c.wallhere.com/photos/9c/ba/The_Matrix_Reloaded_Neo_Keanu_Reeves_movies_film_stills_bullet_sunglasses_men-2231882.jpg!d" width=258 height=210 alt="The Matrix">
+                    <div class="genre">Genre: Science Fiction</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update: 18 August 2023</div>
+                    <div class="rating">Rating: 6.8/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                </div>
+                <div class="card">
+                    <div class="title">Avatar</div>
+                    <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2023/05/avater-the-way-of-water-poster.jpg" width=258 height=210 alt="Avatar">
+                    <div class="genre">Genre: Science Fiction</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update: 05 April 2025</div>
+                    <div class="rating">Rating: 7.7/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                </div>
+                <div class="card">
+                    <div class="title">Blade Runner 2049</div>
+                    <img src="https://wallpapers.com/images/hd/blade-runner-2049-officer-k-hd-xdoh7eehhowsirbb.jpg" width=258 height=210 alt="Blade Runner 2049">
+                    <div class="genre">Genre: Science Fiction</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update: 09 October 2024</div>
+                    <div class="rating">Rating: 7.5/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+
+                </div>
+                <div class="card">
+                    <div class="title">Dune</div>
+                    <img src="https://dunenewsnet.com/wp-content/uploads/2021/06/Dune-A-Game-of-Conquest-and-Diplomacy-Box-Top-Movie-Art.jpg" width=258 height=210 alt="Dune">
+                    <div class="genre">Genre: Science Fiction</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update: 20 February 2024</div>
+                    <div class="rating">Rating: 7.1/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <button class="btn" onclick="downloadList()">Download List</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadList() {
+            const recommendations = `
+            Top Science Fiction Movie Recommendations:
+1. Interstellar - Genre: Sci-Fi - Rating: 8.6/10
+2. Inception - Genre: Sci-Fi - Rating: 8.8/10
+3. The Matrix - Genre: Sci-Fi - Rating: 8.7/10
+4. Avatar - Genre: Sci-Fi - Rating: 7.8/10
+5. Blade Runner 2049 - Genre: Sci-Fi - Rating: 8.0/10
+6. Dune - Genre: Sci-Fi - Rating: 8.1/10
+
+            `;
+            const blob = new Blob([recommendations], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'movie_recommendations.txt';
+            link.click();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Movie Recommendations</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://www.scrolldroll.com/wp-content/uploads/2022/10/Best-English-action-Movies-Of-2022-featured.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        .overlay {
+            background-color: rgba(26, 25, 25, 0.546);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color:  rgba(247, 105, 105, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            height: 400px; /* Reduced height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 10px hsla(0, 3%, 88%, 0.102);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .title {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .genre, .rating, .subscription {
+            font-size: 1em;
+            margin-top: 5px;
+        }
+
+        .subscription {
+            color: #00ffcc;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #00ffcc;
+            color: black;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #00ccaa;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <h1>Top Action Movie Recommendations</h1>
+            <div class="movie-grid">
+                <div class="card">
+                    <div class="title">The Shawshank Redemption</div>
+                    <img src="https://image.tmdb.org/t/p/original/36ewyr1LdwwedDQhrlmhsi1nlnc.jpg" width=258 height=210 alt="Shawshank">
+                    <div class="genre">Genre: Drama</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update: 20 March 2024</div>
+                    <div class="rating">Rating: 9.3/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+            
+                </div>
+                <div class="card">
+                    <div class="title">Forrest Gump</div>
+                    <img src="https://1.bp.blogspot.com/-x7dFjO4o2q8/YOgZ3Vth-wI/AAAAAAAEJcA/x-P0ZcOoSzYFIF9lJyVW9taTCdwzIEYGACLcBGAsYHQ/s2048/tom-hanks-in-forrest-gump-5.jpeg" width=258 height=210 alt="Forrest Gump">
+                    <div class="genre">Genre: Drama</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update: 12 Feb 2023</div>
+                    <div class="rating">Rating: 8.8/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                </div>
+                <div class="card">
+                    <div class="title">The Pursuit of Happyness</div>
+                    <img src="https://images-na.ssl-images-amazon.com/images/S/pv-target-images/9dc3745b2f18cb00844f8f508b36717f84d11ba7aef3faabe01785f850432024._RI_V_TTW_.jpg" width=258 height=210 alt="Pursuit of Happyness">
+                    <div class="genre">Genre: Drama</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update: 10 Jan 2022</div>
+                    <div class="rating">Rating: 8.0/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+
+                   
+                </div>
+                <div class="card">
+                    <div class="title">The Godfather</div>
+                    <img src="https://prdaficalmjediwestussa.blob.core.windows.net/images/2022/09/AFIMC22_GODFATHER_PART_II_THE4.jpg" width=258 height=210 alt="The Godfather">
+                    <div class="genre">Genre: Drama</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: Italian</div>
+                    <div class="Latest Update">Latest Update: 09 July 2023</div>
+                    <div class="rating">Rating: 9.2/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                    
+                </div>
+                <div class="card">
+                    <div class="title">A Beautiful Mind</div>
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.NeUaZb8YxefEkMe_t2_g6gHaEw&pid=Api&P=0&h=180" width=258 height=210 alt="A Beautiful Mind">
+                    <div class="genre">Genre: Drama</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update: 15 November 2023</div>
+                    <div class="rating">Rating: 8.2/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                    
+                </div>
+                <div class="card">
+                    <div class="title">The Green Mile</div>
+                    <img src="https://image.tmdb.org/t/p/original/b3YKSf7aHLA1XZ4flqfFFN9YGrE.jpg" width=258 height=210 alt="The Green Mile">
+                    <div class="genre">Genre: Drama</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update: 01 May 2025</div>
+                    <div class="rating">Rating: 8.6/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                    
+                </div>
+            </div>
+
+            <div class="download-section">
+                <button class="btn" onclick="downloadList()">Download List</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadList() {
+            const recommendations = `
+Top Action Movie Recommendations:
+
+1. The Shawshank Redemption - Genre: Drama - Rating: 9.3/10
+2. Forrest Gump - Genre: Drama - Rating: 8.8/10
+3. The Pursuit of Happyness - Genre: Drama - Rating: 8.0/10
+4. The Godfather - Genre: Drama - Rating: 9.2/10
+5. A Beautiful Mind - Genre: Drama - Rating: 8.2/10
+6. The Green Mile - Genre: Drama - Rating: 8.6/10
+            `;
+            const blob = new Blob([recommendations], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'movie_recommendations.txt';
+            link.click();
+        }
+    </script>
+</body>
+</html>

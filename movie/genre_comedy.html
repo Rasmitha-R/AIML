@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Movie Recommendations</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://www.scrolldroll.com/wp-content/uploads/2022/10/Best-English-action-Movies-Of-2022-featured.png') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+        }
+
+        .overlay {
+            background-color: rgba(26, 25, 25, 0.546);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color:  rgba(247, 105, 105, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            height: 400px; /* Reduced height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 10px hsla(0, 3%, 88%, 0.102);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .title {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .genre, .rating, .subscription {
+            font-size: 1em;
+            margin-top: 5px;
+        }
+
+        .subscription {
+            color: #00ffcc;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #00ffcc;
+            color: black;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #00ccaa;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <h1>Top Action Movie Recommendations</h1>
+            <div class="movie-grid">
+                <div class="card">
+                    <div class="title">The Hangover</div>
+                    <img src="http://1.bp.blogspot.com/-gNln7-7NCCY/UKtWZRVSqII/AAAAAAAAAQY/oklf87GLAfM/s1600/The_Hangover_Wallpaper_03_by_JasonOrtiz.jpg" width=258 height=210 alt="The Hangover">
+                    <div class="genre">Genre: comedy</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update:11 January 2020</div>
+                    <div class="rating">Rating: 8.8/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+            
+                </div>
+                <div class="card">
+                    <div class="title">Superbad</div>
+                    <img src="https://www.comingsoon.net/wp-content/uploads/sites/3/2023/09/Superbad_1200x675.jpg?resize=1200,630" width=258 height=210 alt="Superbad">
+                    <div class="genre">Genre: Comedy</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update: 15 octomber 2022</div>
+                    <div class="rating">Rating: 8.1/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                   
+                </div>
+                <div class="card">
+                    <div class="title">Jumanji: Welcome to the Jungle</div>
+                    <img src="https://streamcoimg-a.akamaihd.net/000/382/2431/3822431-Banner-L2-291f8518d3356153c39646be9bb20a5b.jpg" width=258 height=210 alt="Jumanji">
+                    <div class="genre">Genre: Comedy</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: Hindi</div>
+                    <div class="Latest Update">Latest Update:27 may 2023</div>
+                    <div class="rating">Rating: 9.0/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                   
+                </div>
+                <div class="card">
+                    <div class="title">Home Alone</div>
+                    <img src="https://cdn.britannica.com/32/216332-050-04CB8699/Movie-still-Macaulay-Culkin-Joe-Pesci-Home-Alone-1990.jpg" width=258 height=210 alt="Home Alone">
+                    <div class="genre">Genre: Comedy</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: Spanish</div>
+                    <div class="Latest Update">Latest Update:23 April 2024</div>
+                    <div class="rating">Rating: 7.4/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                    
+                </div>
+                <div class="card">
+                    <div class="title">The Mask</div>
+                    <img src="https://i.pinimg.com/736x/c1/21/3e/c1213e5a4a7cdadca2dc8e57230ae819.jpg" width=258 height=210 alt="The Mask">
+                    <div class="genre">Genre: Comedy</div>
+                    <div class="Quality">Quality: HQ PreDVD</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update :08 march 2025</div>
+                    <div class="rating">Rating: 8.5/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                    
+                </div>
+                <div class="card">
+                    <div class="title">Zombieland</div>
+                    <img src="https://images8.alphacoders.com/103/thumb-1920-1036137.jpg" width=258 height=210 alt="Zombieland">
+                    <div class="genre">Genre: Comedy</div>
+                    <div class="Language">Language: English</div>
+                    <div class="Latest Update">Latest Update:01 January 2023</div>
+                    <div class="rating">Rating: 8.6/10</div>
+                    <div class="subscription">Monthly: $9.99 | Yearly: $99.99</div>
+                    
+                </div>
+            </div>
+
+            <div class="download-section">
+                <button class="btn" onclick="downloadList()">Download List</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadList() {
+            const recommendations = `
+Top Action Movie Recommendations:
+
+1. The Hangover - Genre: Comedy - Rating: 7.7/10
+2. Superbad - Genre: Comedy - Rating: 7.6/10
+3. Jumanji: Welcome to the Jungle - Genre: Comedy - Rating: 6.9/10
+4. Home Alone - Genre: Comedy - Rating: 7.6/10
+5. The Mask - Genre: Comedy - Rating: 6.9/10
+6. Zombieland - Genre: Comedy - Rating: 7.6/10
+            `;
+            const blob = new Blob([recommendations], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'movie_recommendations.txt';
+            link.click();
+        }
+    </script>
+</body>
+</html>
